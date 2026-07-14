@@ -33,7 +33,3 @@ npm run dev
 ```
 
 Then open the local address it prints in the terminal.
-
-## Known limitations
-
-The 3D models are sourced from free assets rather than custom-modeled, and the drivetrain model doesn't have a separately-isolated motor or battery mesh — some of the mechanical detail you see at each stage is grouped rather than perfectly separated part-by-part. Good enough for the interaction and explanation this project is going for, but worth knowing if you look closely at the geometry.
