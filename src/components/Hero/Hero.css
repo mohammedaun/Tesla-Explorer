@@ -1,0 +1,129 @@
+.hero {
+  display: flex;
+  align-items: center;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.hero__decoration {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 520px;
+  height: 520px;
+  pointer-events: none;
+}
+
+.hero__deco-shape {
+  position: absolute;
+  border-radius: 30%;
+}
+
+.hero__deco-shape--a {
+  top: 60px;
+  right: 220px;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, rgba(0, 159, 175, 0.16), rgba(74, 127, 214, 0.12));
+  border-radius: 22px;
+}
+
+.hero__deco-shape--b {
+  top: 190px;
+  right: 90px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 159, 175, 0.14);
+  border-radius: 50%;
+}
+
+.hero__deco-shape--c {
+  top: 40px;
+  right: 40px;
+  width: 18px;
+  height: 90px;
+  background: rgba(74, 127, 214, 0.14);
+  border-radius: 12px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+}
+
+.hero__title {
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 1.02;
+  font-weight: 700;
+  margin-top: 18px;
+  color: var(--color-ink);
+}
+
+.hero__subtitle {
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  max-width: 480px;
+}
+
+.hero__cta {
+  margin-top: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  background: var(--gradient-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s var(--ease-cinematic), box-shadow 0.3s var(--ease-cinematic);
+}
+
+.hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 60px rgba(0, 159, 175, 0.22);
+}
+
+.hero__cta-arrow {
+  transition: transform 0.3s var(--ease-cinematic);
+}
+
+.hero__cta:hover .hero__cta-arrow {
+  transform: translateX(4px);
+}
+
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.hero__scroll-line {
+  width: 32px;
+  height: 1px;
+  background: var(--color-ink-soft);
+  opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+  .hero__decoration {
+    width: 320px;
+    height: 320px;
+    top: -60px;
+    right: -60px;
+  }
+  .hero__scroll-hint {
+    left: 24px;
+  }
+}

@@ -1,0 +1,106 @@
+.swipe-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 40px;
+  user-select: none;
+}
+
+.swipe-layer__hint {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: var(--color-ink-soft);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 8px 16px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+
+.swipe-layer__nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  pointer-events: auto;
+}
+
+.swipe-layer__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-card);
+  color: var(--color-ink);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-line);
+  transition: all 0.25s var(--ease-cinematic);
+}
+
+.swipe-layer__arrow:hover:not(:disabled) {
+  background: var(--gradient-accent);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.swipe-layer__arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.swipe-layer__label {
+  margin-top: 14px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-ink);
+}
+
+.swipe-layer__dots {
+  display: flex;
+  gap: 14px;
+}
+
+.swipe-layer__dot {
+  position: relative;
+  width: 34px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(20, 24, 26, 0.12);
+  overflow: hidden;
+  transition: background 0.3s var(--ease-cinematic);
+}
+
+.swipe-layer__dot.is-active {
+  background: rgba(0, 159, 175, 0.15);
+}
+
+.swipe-layer__dot-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--gradient-accent);
+}
+
+@media (max-width: 700px) {
+  .swipe-layer__hint {
+    font-size: 11px;
+    top: 16px;
+    padding: 6px 12px;
+  }
+  .swipe-layer__arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
+  }
+}
